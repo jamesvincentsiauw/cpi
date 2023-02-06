@@ -11,6 +11,3 @@ def main(thread: int, publisher: RabbitPublisher):
     if cpi_result:
         cpi_result['thread_number'] = thread
         publisher.publish_message(json.dumps(cpi_result))
-
-if __name__ == '__main__':
-    main()
